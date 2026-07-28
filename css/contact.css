@@ -1,0 +1,172 @@
+.contact-page{
+    width:min(1200px,90%);
+    margin:auto;
+    padding:15px 0 80px;
+}
+
+.contact-header h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+
+
+background:linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+);
+
+-webkit-background-clips:text;
+-webkit-text-fill-color:transparent;
+}
+
+.content-header p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:40px;
+}
+
+.contact-info,
+.contact-form{
+    padding:35px;
+}
+
+.contact-info h2,
+.contact-form h2{
+    margin-bottom:25px;
+    color:var(--primary);
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    margin-bottom:20px;
+}
+
+.info-item i{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(0,212,255,.12);
+
+    color:var(--primary);
+
+    font-size:1.2rem;
+}
+
+.social-links{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+}
+
+.social-links a{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    transition:.35s;
+}
+
+.social-links a:hover{
+    transform:translateY(-6px);
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+    box-shadow:0 10px 25px rgba(0,212,255,.25);
+
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:var(--text);
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 15px rgba(0,212,255,.2);
+}
+
+.contact-form button{
+    margin-top:10px;
+}
+
+.contact-info:hover,
+.contact-form:hover{
+    transform:translateY(-8px);
+    transition:.35;
+    box-shadow:0 15px 35px rgba(0,212,255,.25);
+}
+
+.contact-info,
+.contact-form{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translate(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

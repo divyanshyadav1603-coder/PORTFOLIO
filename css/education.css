@@ -1,0 +1,168 @@
+.education-page{
+    width:min(1200px,90%);
+    margin:auto;
+    padding:150px 0 80px;
+}
+
+.education-header{
+    text-align:center;
+    margin-bottom:70px;
+
+}
+
+.education-header h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    -webkit-background-clips:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.education-header p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.timeline{
+    position:relative;
+    margin:60px auto;
+    max-width:900px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+
+    width:4px;
+    background:linear-gradient(
+        var(--primary)
+        var(--secondary)
+    );
+}
+
+.timeline-item{
+    position:relative;
+    padding-left:70px;
+    margin-bottom:50px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:8px;
+    top:20px;
+
+    width:26px;
+    height:26px;
+
+    background:var(--primary);
+
+    border-radius:50%;
+
+    box-shadow:0 0 20px rgba(0,212,255,.5);
+}
+
+.timeline-content{
+    padding:30px;
+    transition:35s;
+}
+
+.timeline-content:hover{
+    transform:translate(-8px);
+    box-shadow:0 15px 35px rgba(0,212,255,.25);
+}
+
+.year{
+    display:inline-block;
+    margin-bottom:15px;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    background:rgba(0,212,255,.12);
+
+    color:var(--primary);
+
+    font-size:.9rem;
+    font-weight:600;
+
+}
+
+.timeline-content h2{
+    margin-bottom:10px;
+}
+
+.timeline-content h3{
+    margin-bottom:15px;
+    color:var(--primary);
+}
+
+.timline-content p{
+    line-height:1.8;
+}
+
+.certificates{
+    margin-top:90px;
+}
+
+.certificates h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:var(--primary);
+}
+
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.certificate-card{
+    padding:35px;
+    text-align:center;
+    transition:.35s
+}
+
+.certificate-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,212,255,.25);
+}
+
+.certificate-card i{
+    font-size:3rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.certificate-card h3{
+    margin-bottom:15px;
+}
+
+.timeline-item,
+.certificate-card{
+    animation:fadeup .8s ease;
+}
+
+@keyframes fadeup{
+
+    from{
+        opacity:0;
+        transform:translate(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
